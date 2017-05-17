@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib{
     
+    [super awakeFromNib];
+    
     self.layer.cornerRadius = self.cornerRadius;
     self.layer.borderWidth = self.borderWidth;
     self.layer.borderColor = self.borderClolor.CGColor;
@@ -88,6 +90,7 @@
 
 
 - (void)textViewTextChanged:(NSNotification *)notobject{
+    NSLog(@"%@", notobject);
     NSString *inputString = [self.attributedText string];
     [self setText:inputString];
 }
